@@ -1,0 +1,29 @@
+<Page navigatedTo="pageNavigatedTo">
+    <StackLayout>
+        <StackLayout>
+            <Label text="Use the form below to search for houses to buy. You can search by place-name, postcode, or click 'My location', to search in your current location!"
+                   cssClass="title"/>
+            <SearchBar id="search" hint="Enter your location here" />
+            <Button text="Go" />
+            <Button text="Location" />
+        </StackLayout>
+        <GridLayout>
+            <StackLayout visibility="{{ state === 'location_select' ? 'visible' : 'collapsed' }}">
+                <Label text="Suggested Locations" />
+                <ListView items="{{ locations }}">
+                    <ListView.itemTemplate>
+                        <Label text="{{ name }}" textWrap="true" cssClass="title" />
+                    </ListView.itemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout visibility="{{ state === 'idle' ? 'visible' : 'collapsed' }}">
+                <Label text="Recent Locations" />
+                <ListView items="{{ recentLocations }}">
+                    <ListView.itemTemplate>
+                        <Label text="{{ name }}" textWrap="true" cssClass="title" />
+                    </ListView.itemTemplate>
+                </ListView>
+            </StackLayout>
+        </GridLayout>
+    </StackLayout>
+</Page>

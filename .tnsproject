@@ -1,3 +1,6 @@
 {
-	"id": "com.propertycross.nativescript"
+	"id": "com.propertycross.nativescript",
+	"tns-android": {
+		"version": "1.0.0"
+	}
 }
