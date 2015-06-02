@@ -1,3 +1,10 @@
 ﻿Page {
-    background: #ffffff;
+    background-color: #ffffff;
+}
+label {
+    margin: 15 0;
+    font-size: 14;
+}
+button {
+    text-align: center;
 }

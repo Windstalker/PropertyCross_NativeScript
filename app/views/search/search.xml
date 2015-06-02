@@ -2,28 +2,21 @@
     <StackLayout>
         <StackLayout>
             <Label text="Use the form below to search for houses to buy. You can search by place-name, postcode, or click 'My location', to search in your current location!"
-                   cssClass="title"/>
+                   cssClass="title"
+                   textWrap="true" />
             <SearchBar id="search" hint="Enter your location here" />
-            <Button text="Go" />
-            <Button text="Location" />
+            <DockLayout orientation="horizontal">
+                <Button text="Go" />
+                <Button text="Location" />
+            </DockLayout>
         </StackLayout>
-        <GridLayout>
-            <StackLayout visibility="{{ state === 'location_select' ? 'visible' : 'collapsed' }}">
-                <Label text="Suggested Locations" />
-                <ListView items="{{ locations }}">
-                    <ListView.itemTemplate>
-                        <Label text="{{ name }}" textWrap="true" cssClass="title" />
-                    </ListView.itemTemplate>
-                </ListView>
-            </StackLayout>
-            <StackLayout visibility="{{ state === 'idle' ? 'visible' : 'collapsed' }}">
-                <Label text="Recent Locations" />
-                <ListView items="{{ recentLocations }}">
-                    <ListView.itemTemplate>
-                        <Label text="{{ name }}" textWrap="true" cssClass="title" />
-                    </ListView.itemTemplate>
-                </ListView>
-            </StackLayout>
-        </GridLayout>
+        <StackLayout>
+            <Label text="{{ locationsType }}" />
+            <ListView items="{{ locations }}" cssClass="locations">
+                <ListView.itemTemplate>
+                    <Label text="{{ name }}" textWrap="true" cssClass="location-name" />
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
 </Page>
