@@ -8,3 +8,11 @@ label {
 button {
     text-align: center;
 }
+
+.container {
+
+}
+
+.padded {
+    padding: 0 15;
+}

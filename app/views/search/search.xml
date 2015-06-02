@@ -1,14 +1,16 @@
-<Page navigatedTo="pageNavigatedTo">
+<Page navigatedTo="pageNavigatedTo" loaded="pageLoaded">
     <StackLayout>
         <StackLayout>
-            <Label text="Use the form below to search for houses to buy. You can search by place-name, postcode, or click 'My location', to search in your current location!"
-                   cssClass="title"
-                   textWrap="true" />
-            <SearchBar id="search" hint="Enter your location here" />
-            <DockLayout orientation="horizontal">
-                <Button text="Go" />
-                <Button text="Location" />
-            </DockLayout>
+            <StackLayout cssClass="container padded">
+                <Label text="Use the form below to search for houses to buy. You can search by place-name, postcode, or click 'My location', to search in your current location!"
+                       cssClass="title"
+                       textWrap="true" />
+            </StackLayout>
+            <SearchBar id="search" hint="Enter location here" />
+            <GridLayout rows="auto" columns="*, *">
+                <Button text="Go" col="0" row="0" />
+                <Button text="My Location" dock="right" col="1" row="0"/>
+            </GridLayout>
         </StackLayout>
         <StackLayout>
             <Label text="{{ locationsType }}" />

@@ -1,8 +1,8 @@
-var model = require("./search_model");
+var vmModule = require("./search_model");
 
 function pageLoaded(args) {
 	var page = args.object;
-
+	page.bindingContext = vmModule.model;
 }
 
 function pageNavigatedTo(args) {
