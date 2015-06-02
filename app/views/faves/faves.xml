@@ -1,0 +1,11 @@
+<Page>
+    <GridLayout rows="auto, *" columns="*">
+        <Label text="Favourites" />
+        <ListView items="{{ properties }}" row="1">
+            <ListView.itemTemplate>
+                <Image src="{{ thumbnailURL }}" />
+                <Label text="{{ name }}" cssClass="title" />
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

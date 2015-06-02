@@ -12,13 +12,13 @@
                 <Button text="My Location" dock="right" col="1" row="0"/>
             </GridLayout>
         </StackLayout>
-        <StackLayout>
-            <Label text="{{ locationsType }}" />
+        <Label text="{{ locationsType }}" />
+        <GridLayout>
             <ListView items="{{ locations }}" cssClass="locations">
                 <ListView.itemTemplate>
-                    <Label text="{{ name }}" textWrap="true" cssClass="location-name" />
+                    <Label text="{{ name }}" cssClass="title" />
                 </ListView.itemTemplate>
             </ListView>
-        </StackLayout>
+        </GridLayout>
     </StackLayout>
 </Page>
