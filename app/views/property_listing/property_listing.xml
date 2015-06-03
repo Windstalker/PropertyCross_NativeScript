@@ -1,0 +1,13 @@
+<Page>
+    <GridLayout columns="auto,*,auto">
+        <Label class="heading1" col="1" text="Property Details" />
+        <Button id="fave" text="Fave" col="2" />
+    </GridLayout>
+    <StackLayout>
+        <Label text="900,000$" cssClass="price" />
+        <Image src="{{ fullImageURL }}" stretch="aspectFill"/>
+        <Label cssClass="features" text="1 bed 2 rooms" />
+        <Label cssClass="description" textWrap="true"
+               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec pharetra odio, vel posuere ipsum. Quisque ac ipsum sit amet neque auctor rutrum vel id ipsum. Nulla tristique, dolor at egestas elementum, dolor elit placerat massa, quis lacinia ipsum ipsum ut urna. In eros tellus, cursus nec iaculis in, fringilla sit amet metus." />
+    </StackLayout>
+</Page>

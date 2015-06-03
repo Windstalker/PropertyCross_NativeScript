@@ -16,3 +16,14 @@ button {
 .padded {
     padding: 0 15;
 }
+
+.heading1 {
+    font-size: 16;
+    margin: 15 0 20;
+}
+.heading2 {
+    font-size: 14;
+}
+.heading3 {
+    font-size: 12;
+}

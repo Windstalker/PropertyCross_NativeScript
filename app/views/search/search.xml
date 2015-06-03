@@ -2,6 +2,7 @@
     <StackLayout>
         <StackLayout>
             <StackLayout cssClass="container padded">
+                <Label text="Welcome to the PropertyCross app!" cssClass="heading1" />
                 <Label text="Use the form below to search for houses to buy. You can search by place-name, postcode, or click 'My location', to search in your current location!"
                        cssClass="title"
                        textWrap="true" />
@@ -12,13 +13,15 @@
                 <Button text="My Location" dock="right" col="1" row="0"/>
             </GridLayout>
         </StackLayout>
-        <Label text="{{ locationsType }}" />
-        <GridLayout>
-            <ListView items="{{ locations }}" cssClass="locations">
-                <ListView.itemTemplate>
-                    <Label text="{{ name }}" cssClass="title" />
-                </ListView.itemTemplate>
-            </ListView>
-        </GridLayout>
+        <StackLayout cssClass="container padded">
+            <Label text="{{ locationsType }}" cssClass="heading2" />
+            <GridLayout row="*">
+                <ListView items="{{ locations }}" id="locations" itemTap="locationsItemTap">
+                    <ListView.itemTemplate>
+                        <Label text="{{ name }}" cssClass="title" />
+                    </ListView.itemTemplate>
+                </ListView>
+            </GridLayout>
+        </StackLayout>
     </StackLayout>
 </Page>
