@@ -1,4 +1,4 @@
-<Page>
+<Page navigatedTo="pageNavigatedTo" loaded="pageLoaded">
     <GridLayout rows="auto, *" columns="*">
         <Label text="Favourites" />
         <ListView items="{{ properties }}" row="1">

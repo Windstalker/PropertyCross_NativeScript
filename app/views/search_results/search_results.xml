@@ -1,10 +1,12 @@
-<Page>
-    <GridLayout rows="auto, *" columns="*">
+<Page navigatedTo="pageNavigatedTo" loaded="pageLoaded">
+    <GridLayout rows="auto, *" columns="*" cssClass="container padded">
         <Label text="Results" />
         <ListView items="{{ properties }}" row="1">
             <ListView.itemTemplate>
-                <Image src="{{ thumbnailURL }}" />
-                <Label text="{{ name }}" cssClass="title" />
+                <StackLayout orientation="horizontal">
+                    <Image src="{{ thumbnailURL }}" width="64" height="64" />
+                    <Label text="{{ name }}" cssClass="title" />
+                </StackLayout>
             </ListView.itemTemplate>
         </ListView>
     </GridLayout>

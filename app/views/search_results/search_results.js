@@ -1,7 +1,20 @@
-/**
- * Created with JetBrains WebStorm.
- * User: ssa7
- * Date: 6/1/15
- * Time: 1:32 PM
- * To change this template use File | Settings | File Templates.
- */
+var vmModule = require("./search_results_model");
+var viewModule = require("ui/core/view");
+var platform = require("platform");
+var ImageModule = require("ui/image");
+
+function pageLoaded(args) {
+	var page = args.object;
+	page.bindingContext = vmModule.model;
+
+	console.log('loaded!');
+}
+
+function pageNavigatedTo(args) {
+	var page = args.object;
+//	page.bindingContext = page.navigationContext;
+	console.log('navigated!');
+}
+
+exports.pageLoaded = pageLoaded;
+exports.pageNavigatedTo = pageNavigatedTo;
